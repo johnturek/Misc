@@ -2,7 +2,7 @@ Function New-GraphToken {
     #Requires -Module AzureRM
     [CmdletBinding()]
     Param(
-        $TenantName = 'ItForDummies.net'
+        $TenantName = 'turek.pw'
     )
 
     try{
@@ -13,7 +13,10 @@ Function New-GraphToken {
         break
     }
 
+    #####Insert your PowerShell Client Id Here ###
     $clientId = "1950a258-227b-4e31-a9cf-717495945fc2" #PowerShell ClientID
+    ##############################################
+    
     $redirectUri = "urn:ietf:wg:oauth:2.0:oob"
     $resourceAppIdURI = "https://graph.windows.net"
     $authority = "https://login.windows.net/$TenantName"
